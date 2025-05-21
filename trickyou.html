@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oops! Not the site you're looking for</title>
+  <style>
+    body {
+      background: #222;
+      color: #eee;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.2em;
+      color: #ff5555;
+    }
+    p {
+      font-size: 1.5em;
+      margin-bottom: 1.5em;
+    }
+    img {
+      max-width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px #ff5555;
+      margin-bottom: 1.5em;
+    }
+    button {
+      background: #ff5555;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1.2em;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #ff2222;
+    }
+  </style>
+</head>
+<body>
+  <h1>Oops!</h1>
+  <p>You found the secret website 🎉</p>
+  <img src="https://media.giphy.com/media/3o7qDEq2bMbcbPRQ2c/giphy.gif" alt="Funny dancing cat" />
+  <br />
+  <button onclick="redirect()">Go back to the real site</button>
+
+  <audio id="funSound" src="https://www.soundjay.com/human/sounds/laugh-1.mp3"></audio>
+
+  <script>
+    // Play funny sound on page load
+    window.onload = () => {
+      const sound = document.getElementById('funSound');
+      sound.volume = 0.3;
+      sound.play();
+    };
+
+    // Redirect button
+    function redirect() {
+      window.location.href = 'https://www.google.com'; // Change to any real site
+    }
+  </script>
+</body>
+</html>
